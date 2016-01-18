@@ -1,0 +1,34 @@
+.flexbox
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+
+  .preview-box
+    width: 230px
+    height: 340px
+    border-radius: 8px
+    padding: 10px
+    margin: 20px
+    background:
+      size: cover
+      position: center
+    &:hover
+      cursor: pointer 
+    @media (min-width: 992px) and (max-width: 1600px)
+      width: 216px
+      height: 315px
+      margin: 18px
+
+    @media (min-width: 1600px)
+      width: 240px
+      height: 350px
+      margin: 20px
+
+  .text-hidden
+    .meta
+      display: none
+
+  .text-show
+    color: white
+    background-image: none !important
+    background: #263238

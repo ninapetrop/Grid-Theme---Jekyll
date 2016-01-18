@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<div class='flexbox'>
+  {% for post in site.posts limit:12 %}
+  <div class='preview-box text-hidden' style='background-image: url({{ site.url }}{{ post.thumbnail }})'>
+    <div class='meta'>
+      <h3 class='preview article-title'>Article Title</h3>
+      <p class='preview article-text'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis aliquid accusantium consectetur vitae nostrum sit corporis iste id...</p>
+      <p class="preview article-category"></p>
+    </div>
+  </div>
+  {% endfor %}
+</div>

@@ -385,3 +385,44 @@ body {
   color: #212121;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
+
+main {
+  max-width: 1200px;
+  margin: auto; }
+
+.flexbox {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+  .flexbox .preview-box {
+    width: 230px;
+    height: 340px;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 20px;
+    background-size: cover;
+    background-position: center; }
+    .flexbox .preview-box:hover {
+      cursor: pointer; }
+    @media (min-width: 992px) and (max-width: 1600px) {
+      .flexbox .preview-box {
+        width: 216px;
+        height: 315px;
+        margin: 18px; } }
+    @media (min-width: 1600px) {
+      .flexbox .preview-box {
+        width: 240px;
+        height: 350px;
+        margin: 20px; } }
+  .flexbox .text-hidden .meta {
+    display: none; }
+  .flexbox .text-show {
+    color: white;
+    background-image: none !important;
+    background: #263238; }
