@@ -1,7 +1,7 @@
 $(function(){
   articleView();
-
 });
+
 
   function articleView(){
     $('.preview-box').mouseover(function(){
@@ -11,10 +11,3 @@ $(function(){
       $(this).addClass('text-hidden').removeClass('text-show');
     });
   }
-
-  // function articleView(){
-  //   var randNum = Math.floor(Math.random() * $('.preview-box').length + 1)
-  //
-  //   $('.preview-box').eq(randNum).removeClass('text-hidden')
-  //     .siblings().addClass('text-hidden');
-    //}

@@ -9,15 +9,38 @@
     <link rel="stylesheet" href="{{ site.url }}/assets/css/main.css">
   </head>
   <body>
-    {% include header.html %}
+    <nav id='menu'>
+      <header>
+        <h2>Menu</h2>
+      </header>
+    </nav>
+    <div class='page-wrap' id='panel'>
+      {% include header.html %}
 
-    <main>
-      {{ content }}
-    </main>
+      <main>
 
-    {% include footer.html %}
+        {{ content }}
+      </main>
+
+      {% include footer.html %}
+    </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="{{ site.url }}/assets/js/slideout.min.js"></script>
+    <script>
+      var slideout = new Slideout({
+        'panel': document.getElementById('panel'),
+        'menu': document.getElementById('menu'),
+        'padding': 256,
+        'tolerance': 70
+      });
+
+      // Toggle button
+      document.querySelector('.toggle-button').addEventListener('click', function() {
+        slideout.toggle();
+      });
+    </script>
     <script src="{{ site.url }}/assets/js/functions.js"></script>
   </body>
 </html>

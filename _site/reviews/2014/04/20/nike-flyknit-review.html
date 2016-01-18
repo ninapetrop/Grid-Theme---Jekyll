@@ -9,16 +9,39 @@
     <link rel="stylesheet" href="http://localhost:3000/assets/css/main.css">
   </head>
   <body>
-    <header id="siteHeader"><h1 class="logo">Grid</h1></header>
+    <nav id='menu'>
+      <header>
+        <h2>Menu</h2>
+      </header>
+    </nav>
+    <div class='page-wrap' id='panel'>
+      <header id="siteHeader"><h1 class="logo">Grid</h1><button class="toggle-button">☰</button></header>
 
-    <main>
-      <p>A Jekyll theme for blogging. With the ability to sort posts by category and list various authors in an authors block, this theme is perfect for collaborative projects.</p>
+      <main>
 
-    </main>
+        <p>A Jekyll theme for blogging. With the ability to sort posts by category and list various authors in an authors block, this theme is perfect for collaborative projects.</p>
 
-    <footer id="siteFooter"><h1>Footer</h1></footer>
+      </main>
+
+      <footer id="siteFooter"><h1>Footer</h1></footer>
+    </div>
+
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://localhost:3000/assets/js/slideout.min.js"></script>
+    <script>
+      var slideout = new Slideout({
+        'panel': document.getElementById('panel'),
+        'menu': document.getElementById('menu'),
+        'padding': 256,
+        'tolerance': 70
+      });
+
+      // Toggle button
+      document.querySelector('.toggle-button').addEventListener('click', function() {
+        slideout.toggle();
+      });
+    </script>
     <script src="http://localhost:3000/assets/js/functions.js"></script>
   </body>
 </html>
